@@ -1,0 +1,171 @@
+.card {
+  background: white;
+  border-radius: var(--border-radius-md);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--gray-200);
+  min-width: 200px;
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.card.warning {
+  border-left: 3px solid var(--color-warning);
+}
+
+.card.success {
+  border-left: 3px solid var(--color-success);
+}
+
+.card.danger {
+  border-left: 3px solid var(--color-danger);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-3);
+}
+
+.title {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--exl-orange);
+  margin: 0;
+}
+
+.icon {
+  color: var(--gray-400);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* Metric Value */
+.metricValue {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.value {
+  font-family: var(--font-mono);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  line-height: 1;
+}
+
+.subtitle {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+}
+
+.trend {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: auto;
+}
+
+.trend.up {
+  background: rgba(76, 175, 80, 0.1);
+  color: var(--color-success);
+}
+
+.trend.down {
+  background: rgba(239, 83, 80, 0.1);
+  color: var(--color-danger);
+}
+
+.trend.neutral {
+  background: var(--gray-100);
+  color: var(--gray-500);
+}
+
+/* Metric Row */
+.metricRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.metricRow.highlight {
+  padding: var(--space-2);
+  background: var(--gray-50);
+  border-radius: var(--border-radius-sm);
+  margin: 0 calc(-1 * var(--space-2));
+}
+
+.rowLabel {
+  font-size: 0.75rem;
+  color: var(--gray-600);
+  flex-shrink: 0;
+}
+
+.rowValue {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+/* Progress Bar in Row */
+.progressBar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex: 1;
+  max-width: 120px;
+}
+
+.progressBar::before {
+  content: '';
+  flex: 1;
+  height: 6px;
+  background: var(--gray-200);
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progressFill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: var(--exl-orange);
+  border-radius: 3px;
+  transition: width 0.4s ease-out;
+}
+
+.progressText {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--exl-orange);
+  min-width: 32px;
+  text-align: right;
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: var(--gray-200);
+  margin: var(--space-1) 0;
+}

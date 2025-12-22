@@ -1,0 +1,316 @@
+.container {
+  padding: var(--space-4) var(--space-6);
+  overflow-x: auto;
+}
+
+.chartWrapper {
+  min-width: 900px;
+  position: relative;
+}
+
+/* Header Row */
+.headerRow {
+  display: flex;
+  border-bottom: 1px solid var(--gray-200);
+  padding-bottom: var(--space-2);
+}
+
+.milestoneHeader {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding-right: var(--space-2);
+}
+
+.milestoneName {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color var(--transition-fast);
+}
+
+.weekLabel {
+  font-size: 0.625rem;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.dayHeaders {
+  display: flex;
+  gap: 2px;
+}
+
+.dayLabel {
+  flex: 1;
+  font-size: 0.5625rem;
+  color: var(--gray-400);
+  text-align: center;
+  padding: var(--space-1) 0;
+}
+
+/* Gantt Area */
+.ganttArea {
+  position: relative;
+  height: 320px;
+  margin-top: var(--space-2);
+}
+
+/* Grid Lines */
+.gridLines {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  pointer-events: none;
+}
+
+.gridColumn {
+  flex: 1;
+  display: flex;
+  border-right: 1px solid var(--gray-100);
+}
+
+.gridColumn:last-child {
+  border-right: none;
+}
+
+.gridCell {
+  flex: 1;
+  border-right: 1px dashed var(--gray-100);
+}
+
+.gridCell:last-child {
+  border-right: none;
+}
+
+/* Today Marker */
+.todayMarker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  z-index: 10;
+}
+
+.todayLine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--exl-orange);
+  opacity: 0.8;
+}
+
+.todayLine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid var(--exl-orange);
+}
+
+.todayLabel {
+  position: absolute;
+  top: 12px;
+  left: 8px;
+  font-size: 0.5625rem;
+  font-weight: 600;
+  color: var(--exl-orange);
+  white-space: nowrap;
+  line-height: 1.3;
+  text-align: left;
+}
+
+/* Gantt Bar Wrapper */
+.ganttBarWrapper {
+  position: absolute;
+  padding: var(--space-2) 0;
+  animation: slideIn 0.4s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.ganttBarContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.budgetLabel {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--gray-600);
+  min-width: 40px;
+}
+
+/* Dual Bar Container */
+.dualBarContainer {
+  flex: 1;
+  position: relative;
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
+
+/* Expected Bar (dashed outline) */
+.expectedBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 14px;
+  border: 2px dashed;
+  border-radius: var(--border-radius-sm);
+  background: transparent;
+  opacity: 0.6;
+}
+
+/* Actual Bar (solid fill) */
+.actualBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14px;
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+}
+
+/* Progress Bar Fill */
+.progressBarFill {
+  height: 100%;
+  border-radius: var(--border-radius-sm);
+  transition: width 0.6s ease-out;
+  position: relative;
+}
+
+.progressBarFill::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 100%
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Progress Info */
+.progressInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 140px;
+}
+
+.progressPercent {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* Delay Badge */
+.delayBadge {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+.delayBadge.delayed {
+  background: var(--color-danger);
+  color: white;
+}
+
+.delayBadge.early {
+  background: var(--color-success);
+  color: white;
+}
+
+/* Checkpoint */
+.checkpoint {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.checkpointDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid;
+  flex-shrink: 0;
+}
+
+.checkpointLabel {
+  font-size: 0.5625rem;
+  color: var(--gray-500);
+  line-height: 1.3;
+}
+
+.checkpointDate {
+  color: var(--gray-400);
+}
+
+/* Legend */
+.legend {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-4) 0;
+  margin-top: var(--space-4);
+  border-top: 1px solid var(--gray-200);
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.75rem;
+  color: var(--gray-600);
+}
+
+.legendExpected {
+  width: 24px;
+  height: 10px;
+  border: 2px dashed var(--gray-400);
+  border-radius: 2px;
+}
+
+.legendActual {
+  width: 24px;
+  height: 10px;
+  background: var(--gray-400);
+  border-radius: 2px;
+}

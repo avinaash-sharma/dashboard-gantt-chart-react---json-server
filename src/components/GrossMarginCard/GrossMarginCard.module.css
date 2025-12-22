@@ -1,0 +1,137 @@
+.card {
+  background: white;
+  border-radius: var(--border-radius-md);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--gray-200);
+  flex: 1;
+  min-width: 280px;
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-3);
+}
+
+.title {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--exl-orange);
+  margin: 0;
+}
+
+.icon {
+  color: var(--gray-400);
+}
+
+.mainValue {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-bottom: var(--space-4);
+}
+
+.percentage {
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-success);
+  line-height: 1;
+}
+
+.label {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+}
+
+.content {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.infoSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.infoRow {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.infoLabel {
+  font-size: 0.6875rem;
+  color: var(--gray-500);
+}
+
+.infoValue {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--gray-400);
+}
+
+.chartSection {
+  flex: 1;
+}
+
+.miniChart {
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.chartBars {
+  display: flex;
+  gap: var(--space-2);
+  align-items: flex-end;
+  height: 100%;
+  flex: 1;
+}
+
+.barGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  flex: 1;
+}
+
+.bar {
+  width: 100%;
+  max-width: 24px;
+  border-radius: var(--border-radius-sm) var(--border-radius-sm) 0 0;
+  transition: height 0.4s ease-out;
+}
+
+.bar.target {
+  background: var(--exl-orange);
+}
+
+.bar.actual {
+  background: var(--color-success);
+}
+
+.bar.projection {
+  background: var(--color-warning);
+}
+
+.barValue {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  font-weight: 600;
+  color: var(--gray-600);
+  white-space: nowrap;
+}

@@ -1,0 +1,36 @@
+.headerWrapper {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header {
+  background-color: var(--exl-black);
+  padding: var(--space-4) var(--space-6);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.logo {
+  font-family: var(--font-primary);
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.05em;
+}
+
+.separator {
+  color: var(--gray-600);
+  font-weight: 300;
+}
+
+.title {
+  color: white;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}

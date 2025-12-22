@@ -1,0 +1,330 @@
+{
+  "project": {
+    "name": "EXL Digital Transformation",
+    "description": "Enterprise-wide digital transformation initiative",
+    "startDate": "2025-01-12",
+    "endDate": "2025-03-12",
+    "days": 26,
+    "status": "In Progress",
+    "resource": 12,
+    "revenue": 5000,
+    "clientValue": 5000
+  },
+  "milestones": [
+    {
+      "id": "1",
+      "name": "MILESTONE 1",
+      "week": "WEEK 1",
+      "startDate": "2025-01-12",
+      "endDate": "2025-01-17",
+      "expectedStartDate": "2025-01-12",
+      "expectedEndDate": "2025-01-17",
+      "actualStartDate": "2025-01-12",
+      "actualEndDate": "2025-01-18",
+      "progress": 100,
+      "budget": 43000,
+      "color": "#8BC34A",
+      "tasks": [
+        {
+          "day": "MO",
+          "date": "2025-01-13",
+          "status": "completed"
+        },
+        {
+          "day": "TU",
+          "date": "2025-01-14",
+          "status": "completed"
+        },
+        {
+          "day": "WE",
+          "date": "2025-01-15",
+          "status": "completed"
+        },
+        {
+          "day": "TH",
+          "date": "2025-01-16",
+          "status": "completed"
+        },
+        {
+          "day": "FR",
+          "date": "2025-01-17",
+          "status": "completed"
+        }
+      ],
+      "checkpoint": {
+        "date": "2025-01-17",
+        "label": "Review",
+        "status": "completed"
+      }
+    },
+    {
+      "id": "2",
+      "name": "MILESTONE 2",
+      "week": "WEEK 2",
+      "startDate": "2025-01-20",
+      "endDate": "2025-01-24",
+      "expectedStartDate": "2025-01-20",
+      "expectedEndDate": "2025-01-24",
+      "actualStartDate": "2025-01-21",
+      "actualEndDate": "2025-01-27",
+      "progress": 80,
+      "budget": 43000,
+      "color": "#D7A07A",
+      "tasks": [
+        {
+          "day": "MO",
+          "date": "2025-01-20",
+          "status": "completed"
+        },
+        {
+          "day": "TU",
+          "date": "2025-01-21",
+          "status": "completed"
+        },
+        {
+          "day": "WE",
+          "date": "2025-01-22",
+          "status": "completed"
+        },
+        {
+          "day": "TH",
+          "date": "2025-01-23",
+          "status": "in-progress"
+        },
+        {
+          "day": "FR",
+          "date": "2025-01-24",
+          "status": "pending"
+        }
+      ],
+      "checkpoint": {
+        "date": "2025-01-24",
+        "label": "Design Sign-off",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "3",
+      "name": "MILESTONE 3",
+      "week": "WEEK 3",
+      "startDate": "2025-01-27",
+      "endDate": "2025-01-31",
+      "expectedStartDate": "2025-01-27",
+      "expectedEndDate": "2025-01-31",
+      "actualStartDate": "2025-01-27",
+      "actualEndDate": null,
+      "progress": 43,
+      "budget": 43000,
+      "color": "#FFB74D",
+      "tasks": [
+        {
+          "day": "MO",
+          "date": "2025-01-27",
+          "status": "completed"
+        },
+        {
+          "day": "TU",
+          "date": "2025-01-28",
+          "status": "completed"
+        },
+        {
+          "day": "WE",
+          "date": "2025-01-29",
+          "status": "in-progress"
+        },
+        {
+          "day": "TH",
+          "date": "2025-01-30",
+          "status": "pending"
+        },
+        {
+          "day": "FR",
+          "date": "2025-01-31",
+          "status": "pending"
+        }
+      ],
+      "checkpoint": {
+        "date": "2025-01-31",
+        "label": "Sprint Review",
+        "status": "pending"
+      },
+      "todayMarker": true,
+      "todayDate": "2025-01-29"
+    },
+    {
+      "id": "4",
+      "name": "MILESTONE 4",
+      "week": "WEEK 4",
+      "startDate": "2025-02-03",
+      "endDate": "2025-02-07",
+      "expectedStartDate": "2025-02-03",
+      "expectedEndDate": "2025-02-07",
+      "actualStartDate": null,
+      "actualEndDate": null,
+      "progress": 0,
+      "budget": 43000,
+      "color": "#90A4AE",
+      "tasks": [
+        {
+          "day": "MO",
+          "date": "2025-02-03",
+          "status": "pending"
+        },
+        {
+          "day": "TU",
+          "date": "2025-02-04",
+          "status": "pending"
+        },
+        {
+          "day": "WE",
+          "date": "2025-02-05",
+          "status": "pending"
+        },
+        {
+          "day": "TH",
+          "date": "2025-02-06",
+          "status": "pending"
+        },
+        {
+          "day": "FR",
+          "date": "2025-02-07",
+          "status": "pending"
+        }
+      ],
+      "checkpoint": {
+        "date": "2025-02-07",
+        "label": "Delivery",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "5",
+      "name": "MILESTONE 5",
+      "week": "WEEK 5",
+      "startDate": "2025-02-10",
+      "endDate": "2025-02-14",
+      "expectedStartDate": "2025-02-10",
+      "expectedEndDate": "2025-02-14",
+      "actualStartDate": null,
+      "actualEndDate": null,
+      "progress": 0,
+      "budget": 43000,
+      "color": "#B0BEC5",
+      "tasks": [
+        {
+          "day": "MO",
+          "date": "2025-02-10",
+          "status": "pending"
+        },
+        {
+          "day": "TU",
+          "date": "2025-02-11",
+          "status": "pending"
+        },
+        {
+          "day": "WE",
+          "date": "2025-02-12",
+          "status": "pending"
+        },
+        {
+          "day": "TH",
+          "date": "2025-02-13",
+          "status": "pending"
+        },
+        {
+          "day": "FR",
+          "date": "2025-02-14",
+          "status": "pending"
+        }
+      ],
+      "checkpoint": {
+        "date": "2025-02-14",
+        "label": "Final Review",
+        "status": "pending"
+      }
+    }
+  ],
+  "resourceBurn": {
+    "totalHours": 1220,
+    "resources": 8,
+    "budgetConsumed": {
+      "value": 51260,
+      "percentage": 36
+    },
+    "monthlyBurn": {
+      "value": 67500,
+      "percentage": 63
+    },
+    "totalManDays": 18
+  },
+  "revenueData": {
+    "invoiced": 0,
+    "total": 185000,
+    "totalInvoiced": {
+      "value": 0,
+      "date": null
+    },
+    "lastInvoice": {
+      "date": "2025-12-08"
+    },
+    "daysToNextInvoice": {
+      "days": null,
+      "date": "2025-12-28"
+    }
+  },
+  "grossMargin": {
+    "percentage": 68.5,
+    "grossMargin": {
+      "label": "Gross Margin",
+      "value": null
+    },
+    "currentBurnRate": {
+      "label": "Current Burn Rate",
+      "value": null
+    },
+    "totalCost": {
+      "label": "Total Cost",
+      "value": null
+    },
+    "chartData": {
+      "target": 120810,
+      "actual": 88000,
+      "projection": 58180
+    }
+  },
+  "chartInterval": {
+    "options": [
+      "Daily",
+      "Weekly",
+      "Monthly"
+    ],
+    "selected": "Weekly"
+  },
+  "statusOptions": [
+    {
+      "value": "all",
+      "label": "Select",
+      "id": "b9d9"
+    },
+    {
+      "value": "in-progress",
+      "label": "In Progress",
+      "id": "2c90"
+    },
+    {
+      "value": "completed",
+      "label": "Completed",
+      "id": "3f1a"
+    },
+    {
+      "value": "on-hold",
+      "label": "On Hold",
+      "id": "48f9"
+    },
+    {
+      "value": "delayed",
+      "label": "Delayed",
+      "id": "cb40"
+    }
+  ]
+}
