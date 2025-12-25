@@ -245,8 +245,10 @@
     }
   ],
   "resourceBurn": {
-    "totalHours": 1220,
+    "totalHours": 1200,
     "resources": 8,
+    "resourcesUtilized": 6,
+    "resourcesNotUtilized": 2,
     "budgetConsumed": {
       "value": 51260,
       "percentage": 36
@@ -255,13 +257,21 @@
       "value": 67500,
       "percentage": 63
     },
+    "weeklyBurn": {
+      "value": 16875,
+      "percentage": 15
+    },
+    "remainingBudget": {
+      "value": 90740,
+      "percentage": 64
+    },
     "totalManDays": 18
   },
   "revenueData": {
-    "invoiced": 0,
+    "invoiced": 2800,
     "total": 185000,
     "totalInvoiced": {
-      "value": 0,
+      "value": 2800,
       "date": null
     },
     "lastInvoice": {

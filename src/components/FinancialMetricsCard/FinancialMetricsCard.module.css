@@ -1,0 +1,139 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.selectorWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownTrigger {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: white;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius-sm);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--gray-700);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.dropdownTrigger:hover {
+  background: var(--gray-50);
+  border-color: var(--gray-400);
+}
+
+.chevron {
+  transition: transform var(--transition-fast);
+}
+
+.chevron.open {
+  transform: rotate(180deg);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + var(--space-1));
+  left: 0;
+  min-width: 160px;
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-lg);
+  z-index: 10;
+  overflow: hidden;
+  animation: slideDown 0.15s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  background: none;
+  border: none;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--gray-700);
+  cursor: pointer;
+  text-align: left;
+  transition: all var(--transition-fast);
+}
+
+.dropdownItem:hover {
+  background: var(--gray-50);
+}
+
+.dropdownItem.active {
+  background: var(--exl-orange);
+  color: white;
+}
+
+.quickTabs {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.quickTab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: white;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius-sm);
+  color: var(--gray-500);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.quickTab:hover {
+  background: var(--gray-50);
+  color: var(--gray-700);
+  border-color: var(--gray-400);
+}
+
+.quickTab.activeTab {
+  background: var(--exl-orange);
+  border-color: var(--exl-orange);
+  color: white;
+}
+
+.cardWrapper {
+  flex: 1;
+}
+
+.cardWrapper > div {
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .quickTabs {
+    display: none;
+  }
+}

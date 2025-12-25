@@ -1,4 +1,4 @@
-import { Users } from 'lucide-react';
+import { Users, UserCheck, UserX } from 'lucide-react';
 import styles from './ResourceBurnCard.module.css';
 
 const ResourceBurnCard = ({ data }) => {
@@ -26,6 +26,22 @@ const ResourceBurnCard = ({ data }) => {
         <span className={styles.hoursLabel}>hrs</span>
       </div>
 
+      {/* Resource Utilization */}
+      {(data.resourcesUtilized !== undefined || data.resourcesNotUtilized !== undefined) && (
+        <div className={styles.resourceUtilization}>
+          <div className={styles.utilizationItem}>
+            <UserCheck size={14} className={styles.utilizationIconActive} />
+            <span className={styles.utilizationLabel}>Utilized:</span>
+            <span className={styles.utilizationValue}>{data.resourcesUtilized || 0}</span>
+          </div>
+          <div className={styles.utilizationItem}>
+            <UserX size={14} className={styles.utilizationIconInactive} />
+            <span className={styles.utilizationLabel}>Not Utilized:</span>
+            <span className={styles.utilizationValue}>{data.resourcesNotUtilized || 0}</span>
+          </div>
+        </div>
+      )}
+
       <div className={styles.metrics}>
         <div className={styles.metricRow}>
           <span className={styles.label}>Budget Consumed</span>
@@ -33,7 +49,7 @@ const ResourceBurnCard = ({ data }) => {
             <span className={styles.value}>{formatCurrency(data.budgetConsumed.value)}</span>
             <div className={styles.progressWrapper}>
               <div className={styles.progressBar}>
-                <div 
+                <div
                   className={styles.progressFill}
                   style={{ width: `${data.budgetConsumed.percentage}%` }}
                 />
@@ -43,13 +59,34 @@ const ResourceBurnCard = ({ data }) => {
           </div>
         </div>
 
+        {/* Remaining Budget - New */}
+        {data.remainingBudget && (
+          <div className={styles.metricRow}>
+            <span className={styles.label}>Remaining Budget</span>
+            <div className={styles.valueWithProgress}>
+              <span className={styles.value}>{formatCurrency(data.remainingBudget.value)}</span>
+              <div className={styles.progressWrapper}>
+                <div className={styles.progressBar}>
+                  <div
+                    className={`${styles.progressFill} ${styles.success}`}
+                    style={{ width: `${data.remainingBudget.percentage}%` }}
+                  />
+                </div>
+                <span className={`${styles.percentage} ${styles.success}`}>
+                  {data.remainingBudget.percentage}%
+                </span>
+              </div>
+            </div>
+          </div>
+        )}
+
         <div className={styles.metricRow}>
           <span className={styles.label}>Monthly Burn</span>
           <div className={styles.valueWithProgress}>
             <span className={styles.value}>{formatCurrency(data.monthlyBurn.value)}</span>
             <div className={styles.progressWrapper}>
               <div className={styles.progressBar}>
-                <div 
+                <div
                   className={`${styles.progressFill} ${styles.warning}`}
                   style={{ width: `${data.monthlyBurn.percentage}%` }}
                 />
@@ -60,6 +97,27 @@ const ResourceBurnCard = ({ data }) => {
             </div>
           </div>
         </div>
+
+        {/* Weekly Burn - New */}
+        {data.weeklyBurn && (
+          <div className={styles.metricRow}>
+            <span className={styles.label}>Weekly Burn</span>
+            <div className={styles.valueWithProgress}>
+              <span className={styles.value}>{formatCurrency(data.weeklyBurn.value)}</span>
+              <div className={styles.progressWrapper}>
+                <div className={styles.progressBar}>
+                  <div
+                    className={`${styles.progressFill} ${styles.info}`}
+                    style={{ width: `${data.weeklyBurn.percentage}%` }}
+                  />
+                </div>
+                <span className={`${styles.percentage} ${styles.info}`}>
+                  {data.weeklyBurn.percentage}%
+                </span>
+              </div>
+            </div>
+          </div>
+        )}
 
         <div className={styles.divider} />
 

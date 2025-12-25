@@ -63,6 +63,41 @@
   font-weight: 500;
 }
 
+.resourceUtilization {
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-2) var(--space-3);
+  background: var(--gray-50);
+  border-radius: var(--border-radius-sm);
+  margin-bottom: var(--space-4);
+}
+
+.utilizationItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.utilizationIconActive {
+  color: var(--color-success);
+}
+
+.utilizationIconInactive {
+  color: var(--gray-400);
+}
+
+.utilizationLabel {
+  font-size: 0.6875rem;
+  color: var(--gray-600);
+}
+
+.utilizationValue {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
 .metrics {
   display: flex;
   flex-direction: column;
@@ -121,6 +156,14 @@
   background: var(--color-warning);
 }
 
+.progressFill.success {
+  background: var(--color-success);
+}
+
+.progressFill.info {
+  background: #3b82f6;
+}
+
 .percentage {
   font-family: var(--font-mono);
   font-size: 0.6875rem;
@@ -132,6 +175,14 @@
 
 .percentage.warning {
   color: var(--color-warning);
+}
+
+.percentage.success {
+  color: var(--color-success);
+}
+
+.percentage.info {
+  color: #3b82f6;
 }
 
 .divider {

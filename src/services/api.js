@@ -79,6 +79,39 @@ export const api = {
     return response.json();
   },
 
+  // Update Resource Burn
+  updateResourceBurn: async (data) => {
+    const response = await fetch(`${API_BASE_URL}/resourceBurn`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    if (!response.ok) throw new Error('Failed to update resource burn');
+    return response.json();
+  },
+
+  // Update Revenue Data
+  updateRevenueData: async (data) => {
+    const response = await fetch(`${API_BASE_URL}/revenueData`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    if (!response.ok) throw new Error('Failed to update revenue data');
+    return response.json();
+  },
+
+  // Update Gross Margin
+  updateGrossMargin: async (data) => {
+    const response = await fetch(`${API_BASE_URL}/grossMargin`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    if (!response.ok) throw new Error('Failed to update gross margin');
+    return response.json();
+  },
+
   // Fetch all data at once
   getAllData: async () => {
     const [project, milestones, resourceBurn, revenueData, grossMargin] = await Promise.all([
