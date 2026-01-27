@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, Database } from 'lucide-react';
+import { LayoutDashboard, Database, Users } from 'lucide-react';
 import styles from './Navigation.module.css';
 
 const Navigation = () => {
@@ -22,6 +22,15 @@ const Navigation = () => {
       >
         <Database size={16} />
         Data Management
+      </NavLink>
+      <NavLink
+        to="/resource-allocation"
+        className={({ isActive }) =>
+          `${styles.navLink} ${isActive ? styles.active : ''}`
+        }
+      >
+        <Users size={16} />
+        Resource Allocation
       </NavLink>
     </nav>
   );

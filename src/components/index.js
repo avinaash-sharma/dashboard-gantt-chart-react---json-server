@@ -12,3 +12,5 @@ export { default as DataManagement } from './DataManagement/DataManagement';
 export { default as MilestoneTable } from './MilestoneTable/MilestoneTable';
 export { default as MilestoneForm } from './MilestoneForm/MilestoneForm';
 export { default as DelaySummary } from './DelaySummary/DelaySummary';
+export { default as ImportModal } from './ImportModal/ImportModal';
+export { default as ResourceAllocation } from './ResourceAllocation/ResourceAllocation';

@@ -57,6 +57,7 @@ export const useMilestones = () => {
 
   return {
     milestones,
+    setMilestones,
     loading,
     error,
     refetch: fetchMilestones,

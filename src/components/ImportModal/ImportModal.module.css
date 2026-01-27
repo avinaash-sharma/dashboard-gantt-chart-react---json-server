@@ -1,0 +1,219 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: var(--space-4);
+}
+
+.modal {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  max-width: 480px;
+  width: 100%;
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin: 0;
+}
+
+.closeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-1);
+  color: var(--gray-400);
+  border-radius: var(--border-radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.closeButton:hover {
+  color: var(--gray-600);
+  background: var(--gray-100);
+}
+
+.content {
+  padding: var(--space-6);
+  flex: 1;
+  overflow-y: auto;
+}
+
+.description {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  margin: 0 0 var(--space-4);
+  line-height: 1.5;
+}
+
+.dropZone {
+  border: 2px dashed var(--gray-300);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-8);
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background: var(--gray-50);
+}
+
+.dropZone:hover {
+  border-color: var(--gray-400);
+  background: var(--gray-100);
+}
+
+.dropZoneDragging {
+  border-color: var(--exl-orange);
+  background: rgba(232, 93, 4, 0.05);
+}
+
+.dropZoneHasFile {
+  border-style: solid;
+  border-color: var(--exl-orange);
+  background: rgba(232, 93, 4, 0.05);
+}
+
+.fileInput {
+  display: none;
+}
+
+.uploadIcon {
+  color: var(--gray-400);
+  margin-bottom: var(--space-3);
+}
+
+.dropText {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  margin: 0 0 var(--space-2);
+}
+
+.browseLink {
+  color: var(--exl-orange);
+  font-weight: 500;
+}
+
+.supportedFormats {
+  font-size: 0.75rem;
+  color: var(--gray-400);
+  margin: 0;
+}
+
+.fileInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+.fileIconCsv {
+  color: var(--gray-600);
+}
+
+.fileIconExcel {
+  color: #217346;
+}
+
+.fileName {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gray-800);
+}
+
+.fileSize {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+}
+
+.errorMessage {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  padding: var(--space-3);
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: var(--border-radius-sm);
+  color: #dc2626;
+  font-size: 0.875rem;
+}
+
+.successMessage {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  padding: var(--space-3);
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: var(--border-radius-sm);
+  color: #16a34a;
+  font-size: 0.875rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-6);
+  border-top: 1px solid var(--gray-200);
+  background: var(--gray-50);
+}
+
+.cancelButton {
+  padding: var(--space-2) var(--space-4);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gray-700);
+  background: white;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.cancelButton:hover {
+  background: var(--gray-50);
+  border-color: var(--gray-400);
+}
+
+.importButton {
+  padding: var(--space-2) var(--space-4);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+  background: var(--exl-orange);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.importButton:hover:not(:disabled) {
+  background: var(--exl-orange-dark);
+}
+
+.importButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

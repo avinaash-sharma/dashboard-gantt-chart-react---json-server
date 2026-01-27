@@ -33,7 +33,7 @@ const MetricCard = ({
   );
 };
 
-// Sub-components for consistent styling
+
 const MetricValue = ({ value, subtitle, trend }) => (
   <div className={styles.metricValue}>
     <span className={styles.value}>{value}</span>

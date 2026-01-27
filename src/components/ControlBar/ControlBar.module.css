@@ -18,6 +18,7 @@
 .controlsRight {
   display: flex;
   align-items: flex-end;
+  gap: var(--space-4);
 }
 
 .controlGroup {
@@ -205,4 +206,53 @@
 .intervalButtonActive:hover {
   background: var(--exl-orange-dark);
   color: white;
+}
+
+.exportButtons {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.exportButton {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--gray-700);
+  background: white;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.exportButton:hover {
+  background: var(--gray-50);
+  border-color: var(--gray-400);
+}
+
+.exportButton:active {
+  background: var(--gray-100);
+}
+
+.exportButtonExcel {
+  color: #217346;
+  border-color: #217346;
+}
+
+.exportButtonExcel:hover {
+  background: rgba(33, 115, 70, 0.05);
+  border-color: #1a5c38;
+}
+
+.importButton {
+  color: var(--exl-orange);
+  border-color: var(--exl-orange);
+}
+
+.importButton:hover {
+  background: rgba(232, 93, 4, 0.05);
+  border-color: var(--exl-orange-dark);
 }

@@ -1,7 +1,7 @@
-import { Calendar, ChevronDown } from 'lucide-react';
+import { Calendar, ChevronDown, Download, FileSpreadsheet, Upload } from 'lucide-react';
 import styles from './ControlBar.module.css';
 
-const ControlBar = ({ project, statusOptions, chartInterval, onProjectChange }) => {
+const ControlBar = ({ project, statusOptions, chartInterval, onProjectChange, onExportCSV, onExportExcel, onImportClick }) => {
   const handleChange = (field, value) => {
     onProjectChange({ ...project, [field]: value });
   };
@@ -115,6 +115,36 @@ const ControlBar = ({ project, statusOptions, chartInterval, onProjectChange }) 
                 {option}
               </button>
             ))}
+          </div>
+        </div>
+
+        <div className={styles.controlGroup}>
+          <label className={styles.label}>Import / Export</label>
+          <div className={styles.exportButtons}>
+            <button
+              className={`${styles.exportButton} ${styles.importButton}`}
+              onClick={onImportClick}
+              title="Import from CSV or Excel"
+            >
+              <Upload size={14} />
+              <span>Import</span>
+            </button>
+            <button
+              className={styles.exportButton}
+              onClick={onExportCSV}
+              title="Export as CSV"
+            >
+              <Download size={14} />
+              <span>CSV</span>
+            </button>
+            <button
+              className={`${styles.exportButton} ${styles.exportButtonExcel}`}
+              onClick={onExportExcel}
+              title="Export as Excel"
+            >
+              <FileSpreadsheet size={14} />
+              <span>Excel</span>
+            </button>
           </div>
         </div>
       </div>
